@@ -18,11 +18,24 @@
 		<!-- Java -->
 		<java.version>21</java.version>
 
+		<!-- Jackson -->
+		<jackson.version>3.0.3</jackson.version>
+
 		<!-- OpenAPI -->
 		<spring.doc.openapi.version>3.0.1</spring.doc.openapi.version>
+
+		<!-- Other -->
+		<lombok.version>1.18.42</lombok.version>
 	</properties>
 
 	<dependencies>
+
+		<!-- Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- Open API Doc -->
 		<dependency>
@@ -31,10 +44,27 @@
 			<version>${spring.doc.openapi.version}</version>
 		</dependency>
 
+		<!-- Jackson -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>tools.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>tools.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Other -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
