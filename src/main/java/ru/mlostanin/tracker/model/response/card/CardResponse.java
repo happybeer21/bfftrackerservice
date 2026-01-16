@@ -1,5 +1,6 @@
 package ru.mlostanin.tracker.model.response.card;
 
+import lombok.Builder;
 import ru.mlostanin.tracker.model.enums.SourceType;
 import ru.mlostanin.tracker.model.response.card.details.SourceDetails;
 
@@ -19,6 +20,7 @@ import java.time.LocalDateTime;
  * @author Maksim Ostanin
  * @since 0.0.1
  */
+@Builder
 public record CardResponse(Long id,
                            String name,
                            String status,
