@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestParam;
+import ru.mlostanin.tracker.model.enums.SourceType;
 import ru.mlostanin.tracker.model.response.card.CardResponse;
 
 @Tag(name = "tracking", description = "Products tracking")
@@ -39,5 +41,7 @@ public interface Tracking {
                     description = "Service internal error. Request cannot be proceed."
             )
     })
-    CardResponse getCards(String type, int page, int size);
+    CardResponse getCards(@RequestParam SourceType type,
+                          @RequestParam(defaultValue = "0") int page,
+                          @RequestParam(defaultValue = "20") int size);
 }

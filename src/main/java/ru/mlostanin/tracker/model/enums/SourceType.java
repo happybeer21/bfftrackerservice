@@ -10,7 +10,8 @@ import lombok.Getter;
  */
 @Getter
 public enum SourceType {
-    ORZ_GK("orzgk");
+    ORZ_GK("orzgk"),
+    OZON("ozon");
 
     private final String type;
 
