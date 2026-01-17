@@ -8,7 +8,7 @@ import ru.mlostanin.tracker.registry.CardStrategyRegistry;
 
 @Service
 @RequiredArgsConstructor
-public class TrackerFacade {
+public class CardFacade {
     private final CardStrategyRegistry cardStrategyRegistry;
 
     public CardResponse getCards(SourceType type, int page, int size) {
