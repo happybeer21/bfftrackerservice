@@ -1,5 +1,6 @@
 package ru.mlostanin.tracker.service.card.impl;
 
+import org.springframework.stereotype.Service;
 import ru.mlostanin.tracker.model.enums.SourceType;
 import ru.mlostanin.tracker.model.response.card.CardResponse;
 import ru.mlostanin.tracker.service.card.CardStrategy;
@@ -10,6 +11,7 @@ import ru.mlostanin.tracker.service.card.CardStrategy;
  * @author maximostanin
  * @since 0.0.1
  */
+@Service
 public class OrzGKCardStrategyImpl implements CardStrategy {
 
     @Override
